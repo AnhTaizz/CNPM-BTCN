@@ -9,7 +9,7 @@ import org.hibernate.type.SqlTypes;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import com.tai.code.entity.identity.UserDtls;
+import com.tai.code.entity.identity.User;
 import com.tai.code.entity.ticketing.enums.BookingStatus;
 
 import jakarta.persistence.Column;
@@ -55,7 +55,7 @@ public class Booking {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", insertable = false, updatable = false)
-    UserDtls user;
+    User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "showtime_id", insertable = false, updatable = false)

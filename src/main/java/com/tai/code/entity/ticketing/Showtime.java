@@ -38,7 +38,7 @@ public class Showtime {
     @Column(name = "showtime_id", updatable = false, nullable = false)
     UUID showtimeId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "movie_id", insertable = false, updatable = false)
     Movie movie;
 

@@ -25,7 +25,7 @@ import lombok.experimental.SuperBuilder;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 
 @Table(name="employee")
-public class Employee extends UserDtls{
+public class Employee extends User{
     @Column(name="hire_date")
     LocalDate hireDate;
 

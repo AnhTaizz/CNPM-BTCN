@@ -19,7 +19,7 @@ import com.tai.code.entity.identity.enums.Member;
 @Entity
 @FieldDefaults(level= AccessLevel.PRIVATE)
 @Table(name="customer")
-public class Customer extends UserDtls{
+public class Customer extends User{
     @Column(name="registration_date")
     LocalDateTime registrationDate;
 

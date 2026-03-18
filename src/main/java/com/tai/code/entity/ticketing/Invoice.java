@@ -12,7 +12,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import com.tai.code.entity.catalog.Promotion;
 import com.tai.code.entity.identity.Employee;
-import com.tai.code.entity.identity.UserDtls;
+import com.tai.code.entity.identity.User;
 import com.tai.code.entity.ticketing.enums.InvoiceStatus;
 import com.tai.code.entity.ticketing.enums.PaymentMethod;
 
@@ -59,7 +59,7 @@ public class Invoice {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "customer_id", insertable = false, updatable = false)
-    UserDtls customer;
+    User customer;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "employee_id", insertable = false, updatable = false)
